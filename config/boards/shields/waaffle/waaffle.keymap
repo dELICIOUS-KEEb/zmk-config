@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
+ * Copyright (c) 2020 dELLIKEEb
  *
  * SPDX-License-Identifier: MIT
  */
@@ -13,7 +13,11 @@
 #define LOWER   1
 #define RAISE   2
 #define ADJUST  3
-
+#define BT0  BT_SEL 0
+#define BT1  BT_SEL 1
+#define BT2  BT_SEL 2
+#define BT3  BT_SEL 3
+#define BT4  BT_SEL 4
 // / {
 //     behaviors {
 //         hm: homerow_mods {
