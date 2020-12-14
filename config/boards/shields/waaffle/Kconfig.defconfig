@@ -1,0 +1,6 @@
+if SHIELD_WAAFFLE_REV3
+
+config ZMK_KEYBOARD_NAME
+	default "waaffle rev3"
+
+endif
