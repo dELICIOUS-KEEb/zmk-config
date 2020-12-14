@@ -56,5 +56,28 @@
             RC(7,9) RC(6,9) RC(5,9) RC(7,4) RC(6,4) RC(5,4) RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5) RC(4,6) RC(4,7) RC(4,8) RC(4,9)
 		>;
 	};
- 
+
+	rt01: encoder_01 {
+        compatible = "alps,ec11";
+        label = "ENCODER 01";
+        a-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        resolution = <4>;
+		status = "disabled";
+    };
+
+	rt02: encoder_02 {
+        compatible = "alps,ec11";
+        label = "ENCODER 02";
+        a-gpios = <&gpio0 26 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&gpio0 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        resolution = <4>;
+		status = "disabled";
+    };
+
+	sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&rt01 &rt02>;
+    };
+	
 };
