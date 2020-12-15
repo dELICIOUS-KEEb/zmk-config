@@ -5,7 +5,7 @@ name: Build
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Build Test
+    name: dELIKEEb firmware test
     strategy:
       matrix:
         board:
@@ -52,7 +52,7 @@ jobs:
         id: west-zephyr-export
         with:
           args: 'zephyr-export'
-      - name: West Build (waaffle_rev3)
+      - name: Wgitest Build (waaffle_rev3)
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-waaffle_rev3
         with:
